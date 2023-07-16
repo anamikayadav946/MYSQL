@@ -1,0 +1,38 @@
+1. Create a view of rentals took in the month of August
+Soln - 
+create view rental_info as
+(select title from rental r 
+join inventory i on r.inventory_id =i.inventory_id
+join film f on i.film_id = f.film_id
+where month(rental_date) = 8);
+select title from rental_info;
+
+
+2. Write a recursive CTE that returns the co-actors of the actor with actor_id 1, up to a depth of 2. Use film_actor and actor tables.
+Soln - 
+
+
+3. Write a query to print even numbers from 10 to 20
+Soln - 
+with recursive ap as 
+(select 10 as n 
+union
+select n+2 from ap where n<20)
+select *from ap;
+
+4. Write a query to print odd numbers from 25 to 35
+Soln - 
+with recursive ap as
+(select 25 as n 
+union
+select n+2 from ap where n<35)
+select * from ap;
+
+5. 
+
+
+
+
+
+
+
