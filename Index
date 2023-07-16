@@ -6,3 +6,10 @@ alter table customer drop index idx_email;
 
 3. Add a multicolumn index on actor table on both first and last name columns
 Soln - create index idx on actor(first_name, last_name);
+
+4. Draw the inverted right angle triangle.
+with recursive ap as(
+select '* * * * *' as n
+union 
+select substring(n,1,length(n)-2) from ap where length(n)>1)
+select * from ap;
