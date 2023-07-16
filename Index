@@ -1,0 +1,8 @@
+1. Create an index on email column in the customer table of maven movies database
+Solution - create index idx_email on customer(email);
+
+2.Delete the index created in the above task.
+alter table customer drop index idx_email;
+
+3. Add a multicolumn index on actor table on both first and last name columns
+Soln - create index idx on actor(first_name, last_name);
